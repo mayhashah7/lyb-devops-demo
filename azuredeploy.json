@@ -51,7 +51,7 @@
         },
         "repoURL": {
             "type": "string",
-            "defaultValue": "https://raw.githubusercontent.com/mayhashah7/lyb-devops-demo/main/",
+            "defaultValue": "https://github.com/brandonroyal/hello-world",
             "metadata": {
                 "description": "The URL for the GitHub repository that contains the project to deploy."
             }
