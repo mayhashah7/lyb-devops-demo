@@ -20,6 +20,5 @@ steps:
     location: 'East US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/mayhashah7/lyb-devops-demo/main/azuredeploy.json'
-    overrideParameters: '-projectName appServiceDeployment'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
