@@ -51,14 +51,14 @@
         },
         "repoURL": {
             "type": "string",
-            "defaultValue": "https://github.com/brandonroyal/hello-world.git",
+            "defaultValue": "https://github.com/mayhashah7/lyb-devops-demo.git",
             "metadata": {
                 "description": "The URL for the GitHub repository that contains the project to deploy."
             }
         },
         "branch": {
             "type": "string",
-            "defaultValue": "master",
+            "defaultValue": "main",
             "metadata": {
                 "description": "The branch of the GitHub repository to use."
             }
