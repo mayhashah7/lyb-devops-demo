@@ -24,12 +24,10 @@ steps:
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
     
-- task: GitHubRelease@1
+- task: AzureRmWebAppDeployment@4
   inputs:
-    gitHubConnection: 'github.com_mayhashah7'
-    repositoryName: 'mayhashah7/lyb-devops-demo'
-    action: 'create'
-    target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'AzurePipelineConnection'
+    appType: 'webApp'
+    WebAppName: 'mayhatest123'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
