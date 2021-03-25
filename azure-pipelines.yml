@@ -23,11 +23,3 @@ steps:
     csmFileLink: 'https://raw.githubusercontent.com/mayhashah7/lyb-devops-demo/main/azuredeploy.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
-    
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'AzurePipelineConnection'
-    appType: 'webApp'
-    WebAppName: 'mayhatest123'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
