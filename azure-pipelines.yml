@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -22,3 +23,13 @@ steps:
     csmFileLink: 'https://raw.githubusercontent.com/mayhashah7/lyb-devops-demo/main/azuredeploy.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
+    
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github.com_mayhashah7'
+    repositoryName: 'mayhashah7/lyb-devops-demo'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
